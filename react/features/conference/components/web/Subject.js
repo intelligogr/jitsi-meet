@@ -47,10 +47,11 @@ class Subject extends Component<Props> {
      */
     render() {
         const { _showParticipantCount, _subject, _visible } = this.props;
-
+        const title = _subject.split('--');
+        const hasLessonId = title.length === 2;
         return (
             <div className = { `subject ${_visible ? 'visible' : ''}` }>
-                <span className = 'subject-text'>{ _subject }</span>
+                <span className = 'subject-text'>{ hasLessonId ? title[1] : _subject }</span>
                 { _showParticipantCount && <ParticipantsCount /> }
                 <ConferenceTimer />
             </div>
@@ -74,7 +75,7 @@ function _mapStateToProps(state) {
 
     return {
         _showParticipantCount: participantCount > 2,
-        _subject: getConferenceName(state),
+        _subject: state['features/base/config'].confID || '',
         _visible: isToolboxVisible(state) && participantCount > 1
     };
 }
