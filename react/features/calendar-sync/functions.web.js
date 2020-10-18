@@ -34,6 +34,8 @@ export function isCalendarEnabled(stateful: Function | Object) {
         microsoftApiApplicationClientID
     } = toState(stateful)['features/base/config'] || {};
 
+    console.log(googleApiApplicationClientID, enableCalendarIntegration)
+
     return Boolean(enableCalendarIntegration && (googleApiApplicationClientID || microsoftApiApplicationClientID));
 }
 

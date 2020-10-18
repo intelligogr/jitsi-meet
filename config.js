@@ -86,19 +86,19 @@ var config = {
     // Audio
 
     // Disable measuring of audio levels.
-    // disableAudioLevels: false,
+    disableAudioLevels: false,
     // audioLevelsInterval: 200,
 
     // Enabling this will run the lib-jitsi-meet no audio detection module which
     // will notify the user if the current selected microphone has no audio
     // input and will suggest another valid device if one is present.
-    enableNoAudioDetection: true,
+    enableNoAudioDetection: false,
 
     // Enabling this will run the lib-jitsi-meet noise detection module which will
     // notify the user if there is noise, other than voice, coming from the current
     // selected microphone. The purpose it to let the user know that the input could
     // be potentially unpleasant for other meeting participants.
-    enableNoisyMicDetection: true,
+    enableNoisyMicDetection: false,
 
     // Start the conference in audio only mode (no video is being received nor
     // sent).
@@ -343,11 +343,11 @@ var config = {
     // hideLobbyButton: false,
 
     // Require users to always specify a display name.
-    // requireDisplayName: true,
+    requireDisplayName: false,
 
     // Whether to use a welcome page or not. In case it's false a random room
     // will be joined when no room is specified.
-    enableWelcomePage: true,
+    enableWelcomePage: false,
 
     // Enabling the close page will ignore the welcome page redirection when
     // a call is hangup.
@@ -380,7 +380,7 @@ var config = {
 
     // Enables calendar integration, depends on googleApiApplicationClientID
     // and microsoftApiApplicationClientID
-    // enableCalendarIntegration: false,
+    enableCalendarIntegration: true,
 
     // When 'true', it shows an intermediate page before joining, where the user can configure their devices.
     // prejoinPageEnabled: false,
@@ -652,6 +652,9 @@ var config = {
      requireDisplayName
      tokenAuthUrl
      */
+
+    etherpad_base: 'https://video.etherpad.com/p/',
+    googleApiApplicationClientID: "347291512929-c74mb95ne9q5sv5bgi3t662thejdq6ap.apps.googleusercontent.com",
 
     /**
      * This property can be used to alter the generated meeting invite links (in combination with a branding domain
