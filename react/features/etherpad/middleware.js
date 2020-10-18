@@ -58,7 +58,9 @@ StateListenerRegistry.register(
                     let url;
                     const { etherpad_base: etherpadBase } = getState()['features/base/config'];
 
+                    console.log({etherpadBase})
                     if (etherpadBase) {
+                        console.log('hasEtherpad')
                         const u = new URL(value, etherpadBase);
 
                         url = u.toString();
