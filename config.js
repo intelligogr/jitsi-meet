@@ -86,7 +86,7 @@ var config = {
     // Audio
 
     // Disable measuring of audio levels.
-    disableAudioLevels: false,
+    disableAudioLevels: true,
     // audioLevelsInterval: 200,
 
     // Enabling this will run the lib-jitsi-meet no audio detection module which
@@ -403,7 +403,7 @@ var config = {
     // This can be useful for debugging purposes (post-processing/analysis of
     // the webrtc stats) as it is done in the jitsi-meet-torture bandwidth
     // estimation tests.
-    // gatherStats: false,
+    gatherStats: false,
 
     // The interval at which PeerConnection.getStats() is called. Defaults to 10000
     // pcStatsInterval: 10000,

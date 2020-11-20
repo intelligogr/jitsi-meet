@@ -41,8 +41,8 @@ const INITIAL_RN_STATE = {
     disableAudioLevels: true,
 
     p2p: {
-        disableH264: false,
-        preferH264: true
+        disableH264: true,
+        preferH264: false
     },
 
     remoteVideoMenu: {}
