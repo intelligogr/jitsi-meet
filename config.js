@@ -653,7 +653,7 @@ var config = {
      tokenAuthUrl
      */
 
-    etherpad_base: 'https://video.etherpad.com/p/',
+    etherpad_base: 'http://localhost:9001/p/',
     googleApiApplicationClientID: "347291512929-c74mb95ne9q5sv5bgi3t662thejdq6ap.apps.googleusercontent.com",
 
     /**
