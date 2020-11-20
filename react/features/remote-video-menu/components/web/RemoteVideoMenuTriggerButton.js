@@ -224,12 +224,6 @@ class RemoteVideoMenuTriggerButton extends Component<Props> {
             );
         }
 
-        buttons.push(
-            <PrivateMessageMenuButton
-                key = 'privateMessage'
-                participantID = { participantID } />
-        );
-
         if (onVolumeChange) {
             buttons.push(
                 <VolumeSlider

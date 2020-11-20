@@ -36,9 +36,6 @@ class SpeakerStatsLabels extends Component<Props> {
                 <div className = 'speaker-stats-item__name'>
                     { t('speakerStats.name') }
                 </div>
-                <div className = 'speaker-stats-item__time'>
-                    { t('speakerStats.speakerTime') }
-                </div>
             </div>
         );
     }
