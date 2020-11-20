@@ -75,7 +75,6 @@ class SpeakerStats extends Component<Props, State> {
      * @inheritdoc
      */
     componentDidMount() {
-        this._updateInterval = setInterval(this._updateStats, 1000);
     }
 
     /**
@@ -85,7 +84,6 @@ class SpeakerStats extends Component<Props, State> {
      * @returns {void}
      */
     componentWillUnmount() {
-        clearInterval(this._updateInterval);
     }
 
     /**
@@ -164,9 +162,6 @@ class SpeakerStats extends Component<Props, State> {
      * @private
      */
     _updateStats() {
-        const stats = this.props.conference.getSpeakerStats();
-
-        this.setState({ stats });
     }
 }
 

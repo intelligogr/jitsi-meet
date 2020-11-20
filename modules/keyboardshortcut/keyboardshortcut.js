@@ -203,13 +203,6 @@ const KeyboardShortcut = {
         });
         this._addShortcutToHelp('SPACE', 'keyboardShortcuts.pushToTalk');
 
-        this.registerShortcut('T', null, () => {
-            sendAnalytics(createShortcutEvent('speaker.stats'));
-            APP.store.dispatch(toggleDialog(SpeakerStats, {
-                conference: APP.conference
-            }));
-        }, 'keyboardShortcuts.showSpeakerStats');
-
         /**
          * FIXME: Currently focus keys are directly implemented below in
          * onkeyup. They should be moved to the SmallVideo instead.
