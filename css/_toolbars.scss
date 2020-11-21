@@ -23,7 +23,7 @@
  * TODO: when the old filmstrip has been removed, remove the "new-" prefix.
  */
 .new-toolbox {
-    bottom: calc((#{$newToolbarSize} * 2) * -1);
+    bottom: calc((#{$newToolbarSize} * 2.25) * -1);
     left: 0;
     position: absolute;
     right: 0;
@@ -69,41 +69,35 @@
         width: 100%;
         z-index: $toolbarZ;
 
-        .button-group-center,
-        .button-group-left,
-        .button-group-right {
+        .button-group-center {
+            width: 100%;
             display: flex;
-            width: 33%;
         }
 
         .button-group-center {
             justify-content: center;
+            align-items: center;
 
             .toolbox-button {
 
                 .toolbox-icon {
-                    background-color: #fff;
+                    background-color: #d6d6d670;
                     border-radius: 50%;
-                    margin: 0px 4px;
+                    margin: 0 4px;
                     width: 50px;
                     height: 50px;
 
                     &:hover {
-                        background-color: #daebfa;
-                        border: 1px solid #daebfa;
+                        background-color: #bdbdbd;
                     }
 
                     &.toggled {
                         background: #2a3a4b;
-                        border: 1px solid #5e6d7a;
 
                         svg {
                             fill: #fff;
                         }
 
-                        &:hover {
-                            background-color: #5e6d7a;
-                        }
                     }
 
                     &.disabled, .disabled & {
@@ -113,21 +107,26 @@
                     }
 
                     svg {
-                        fill: #5e6d7a;
+                        fill: #fff;
                     }
                 }
 
-                &:nth-child(2) {
+                &:nth-child(4) {
                     .toolbox-icon {
                         background-color: $hangupColor;
-                        width: 50px;
-                        height: 50px;
+                        width: 70px;
+                        height: 70px;
+                        border-radius: 25px;
+                        transition: all .3s;
 
                         &:hover {
                             background-color: $hangupColor;
+                            transform: translateY(-3px);
                         }
 
                         svg {
+                            width: 30px;
+                            height: 30px;
                             fill: #fff;
                         }
                     }

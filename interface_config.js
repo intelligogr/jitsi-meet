@@ -210,8 +210,8 @@ var interfaceConfig = {
         'microphone', 'camera', 'closedcaptions', 'desktop', 'fullscreen',
         'fodeviceselection', 'hangup', 'profile',
         'settings', 'raisehand',
-        'videoquality', 'filmstrip', 'invite', 'shortcuts',
-        'tileview', 'help', 'mute-everyone', 'security'
+        'videoquality', 'filmstrip', 'shortcuts',
+        'tileview', 'help', 'mute-everyone',
     ],
 
     TOOLBAR_TIMEOUT: 4000,
